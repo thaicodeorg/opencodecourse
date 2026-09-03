@@ -1,1 +1,95 @@
-site_name: My Docs
+site_name: OpenCode Masterzy — Zero to Pro
+site_description: A complete course on OpenCode from installation to advanced workflow
+site_url: https://thaicodeorg.github.io/opencodecourse/
+repo_url: https://github.com/thaicodeorg/opencodecourse
+repo_name: thaicodeorg/opencodecourse
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+  custom_dir: overrides
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - 01-getting-started/index.md
+    - Installation: 01-getting-started/installation.md
+    - First Run: 01-getting-started/first-run.md
+  - Path Structure:
+    - 02-path-structure/index.md
+    - The Binary: 02-path-structure/binary.md
+    - Config Directory: 02-path-structure/config.md
+    - Data Directory: 02-path-structure/data.md
+    - Skills Locations: 02-path-structure/skills-locations.md
+  - Configuration:
+    - 03-configuration/index.md
+    - opencode.json: 03-configuration/opencode-json.md
+    - opencode.jsonc & Plugins: 03-configuration/opencode-jsonc.md
+    - Switching Models: 03-configuration/models.md
+  - Skills:
+    - 04-skills/index.md
+    - What is a Skill?: 04-skills/what-is-a-skill.md
+    - Installing Skills: 04-skills/installing-skills.md
+    - Skill File Structure: 04-skills/skill-structure.md
+    - Your Installed Skills: 04-skills/your-skills.md
+    - Built-in Skills: 04-skills/built-in-skills.md
+    - Custom Skills: 04-skills/custom-skills.md
+    - Skill Locations: 04-skills/skill-locations.md
+  - Plugins & MCP:
+    - 05-plugins-mcp/index.md
+    - Installing Plugins: 05-plugins-mcp/installing-plugins.md
+    - MCP Servers: 05-plugins-mcp/mcp-servers.md
+  - Daily Workflow:
+    - 06-daily-workflow/index.md
+    - Sessions: 06-daily-workflow/sessions.md
+    - Snapshots: 06-daily-workflow/snapshots.md
+    - Tips & Tricks: 06-daily-workflow/tips-tricks.md
+  - Built-in Tools:
+    - 07-built-in-tools/index.md
+    - File Operations: 07-built-in-tools/file-tools.md
+    - Search Tools: 07-built-in-tools/search-tools.md
+    - Shell Tool: 07-built-in-tools/shell-tools.md
+  - Reference:
+    - Path Cheatsheet: reference/path-cheatsheet.md
